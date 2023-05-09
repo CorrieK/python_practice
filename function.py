@@ -85,6 +85,37 @@ print('The characters in the name are: ', print_list('Asabeneh'))
 
 #Function to capitalize items in a list
 
-def capitalize_list_items():
-    items = ['javascript', 'python', 'java', 'solidity']
-    if len(items)
+def capitalize_list_items(items):
+    for i in range(len(items)):
+        items[i] = items[i].capitalize()
+    return items
+
+items = ['javascript', 'python', 'java', 'solidity']
+capitalized_items = capitalize_list_items(items)
+print(capitalized_items)
+
+#Function that takes an array as a parameter and it returns the reverse of the array
+
+def reverse_list(array):
+    for i in range(len(array)-1,-1,-1):
+        print(array[i], end= " ")
+    print()
+
+list_of_numbers = [1, 2, 3, 4, 5]
+list_of_letters = ["A", "B", "C"]
+
+reverse_list(list_of_numbers)
+reverse_list(list_of_letters)
+
+#Function to add to a list
+
+def add_item(food_items, numbers):
+    food_items.append('Meat')
+    umbers.append(7)
+    return food_items, numbers
+    
+food_items = ['Rice', 'Maize', 'Tomatoes']
+numbers = [1,2,3,4,5,6]
+
+print(add_item(food_items))
+print(add_item(numbers))
